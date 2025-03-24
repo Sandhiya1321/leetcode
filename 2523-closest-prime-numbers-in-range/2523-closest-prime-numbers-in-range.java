@@ -31,7 +31,7 @@ class Solution {
        return ans;
     }
     public static boolean primeval(int val){
-        if(val==1)
+        if(val==2)
             return true;
        if(val==1||val%2==0)
         return false;
