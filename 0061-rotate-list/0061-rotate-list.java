@@ -24,12 +24,12 @@ class Solution {
         last.next = head;
         int rotations = k % length;
         int skip = length - rotations;
-        ListNode newLast = head;
+        ListNode end = head;
         for (int i = 0; i < skip - 1; i++) {
-            newLast = newLast.next;
+            end = end.next;
         }
-        head = newLast.next;
-        newLast.next = null;
+        head = end.next;
+        end.next = null;
 
         return head;
     }
