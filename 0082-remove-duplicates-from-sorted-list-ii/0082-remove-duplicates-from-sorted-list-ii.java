@@ -10,19 +10,24 @@
  */
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        ListNode ans=new ListNode(0,head);
-        ListNode node=ans;
-       while(head!=null&&head.next!=null){
-        if(head.val==head.next.val){
-           while(head.val==head.next.val){
-           head=head.next;
-           }
-           node.next=head.next;
-        }else{
-            node=node.next;
+        // Dummy node before the head to simplify edge cases
+        ListNode dummy = new ListNode(0, head);
+        ListNode prev = dummy;
+
+        while (head != null) {
+            // Detect duplicates
+            if (head.next != null && head.val == head.next.val) {
+                // Skip all nodes with this value
+                while (head.next != null && head.val == head.next.val) {
+                    head = head.next;
+                }
+                prev.next = head.next; // Cut off all duplicates
+            } else {
+                prev = prev.next; // No duplicates, move prev
+            }
+            head = head.next; // Always move head
         }
-        head=head.next;
-       }
-       return ans.next;
+
+        return dummy.next;
     }
 }
