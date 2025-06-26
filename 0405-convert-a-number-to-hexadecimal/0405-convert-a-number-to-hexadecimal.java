@@ -5,10 +5,10 @@ class Solution {
         }
         char[] hex="0123456789abcdef".toCharArray();
         StringBuilder hexa=new StringBuilder();
-        while(num>0){
-            int rem=num%16;
+        while(num!=0&&hexa.length()<8){
+            int rem=num&15;
             hexa.append(hex[rem]);
-            num=num/16;
+            num>>>=4;
         }
         return hexa.reverse().toString();
     }
