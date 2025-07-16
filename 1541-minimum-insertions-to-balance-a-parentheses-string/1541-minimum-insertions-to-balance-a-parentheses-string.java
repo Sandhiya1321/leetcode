@@ -28,3 +28,4 @@ public class Solution {
         // If there are still ')' needed to match earlier '(', add insertions
         return insertions + rightNeeded;
     }
+}
