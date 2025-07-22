@@ -2,7 +2,7 @@ class Solution {
     public int maximumUniqueSubarray(int[] nums) {
         int sum=0;
         int max=0;
-        ArrayList<Integer> list=new ArrayList<>();
+        Set<Integer> list=new HashSet<>();
         int left=0;
         for(int i=0;i<nums.length;i++){
             while(list.contains(nums[i])){
