@@ -18,12 +18,12 @@ class Solution {
             }
         }
 
-        // Convert List<Integer> to int[]
-        int[] intersection = new int[result.size()];
+        
+        int[] ans = new int[result.size()];
         for (int k = 0; k < result.size(); k++) {
-            intersection[k] = result.get(k);
+            ans[k] = result.get(k);
         }
 
-        return intersection;
+        return ans;
     }
 }
