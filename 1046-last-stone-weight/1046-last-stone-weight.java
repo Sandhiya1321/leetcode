@@ -1,6 +1,6 @@
 class Solution {
     public int lastStoneWeight(int[] stones) {
-        PriorityQueue<Integer> max=new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> max=new PriorityQueue<>();
         for(int stone:stones){
             max.add(stone);
         }
