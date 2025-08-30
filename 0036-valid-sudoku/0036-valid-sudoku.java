@@ -12,7 +12,7 @@ class Solution {
                 }
                 int num=board[i][j]-'1';
                 int box=(i/3)*3+(j/3);
-                if(row[i][num]||col[j][num]){
+                if(row[i][num]||col[j][num]|| boards[box][num]){
                     return false;
                 }
                 row[i][num]=true;
